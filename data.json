@@ -1,0 +1,47 @@
+{
+    "payment_type": "vtweb",
+    "vtweb": {
+            "enabled_payments": [
+            "credit_card"
+            ]
+        },
+    "transaction_details": {
+        "order_id": "order5",
+        "gross_amount": 200000
+        },
+    "item_details": [{
+        "id": "item1",
+        "price": 100000,
+        "quantity": 1,
+        "name": "Adidas f50"
+        }, {
+        "id": "item2",
+        "price": 50000,
+        "quantity": 2,
+        "name": "Nike N90"
+        }],
+    "customer_details": {
+        "first_name": "Andri",
+        "last_name": "Setiawan",
+        "email": "andri.setiawan@veritrans.co.id",
+        "phone": "08195010132",
+        "billing_address": {
+            "first_name": "Andri",
+            "last_name": "Setiawan",
+            "address": "Karet",
+            "city": "Jakarta",
+                    "postal_code": "523112",
+            "phone": "08195010132",
+            "country_code": "IDN"
+               },
+        "shipping_address": {
+            "first_name": "John",
+            "last_name": "Watson",
+            "address": "Bakerstreet 221B",
+            "city": "London",
+            "postal_code": "12354",
+            "phone": "081323123123",
+            "country_code": "IDN"
+               }
+    }
+}
