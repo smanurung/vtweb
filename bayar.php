@@ -11,8 +11,9 @@ $username = "6d7ccd71-ea52-43cc-ac42-5402077bd6c6";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://api.sandbox.veritrans.co.id/v2/charge");
-curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_HEADER, 0); //receive header too
 curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); //receive response body
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($req));
 curl_setopt($ch, CURLOPT_USERPWD, $username);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -24,8 +25,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $result = curl_exec($ch);
 curl_close($ch);
 
-$hasil = json_decode($result, true);
-var_dump($result);
-var_dump($hasil);
+$hasil = json_decode($result, false); //return object, not array
+header('Location: '.$hasil->redirect_url);
 
 ?>
